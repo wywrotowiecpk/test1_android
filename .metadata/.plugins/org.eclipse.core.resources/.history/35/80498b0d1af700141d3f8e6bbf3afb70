@@ -1,0 +1,6 @@
+import com.android.uiautomator.core.UiObject;
+import com.android.uiautomator.testrunner.UiAutomatorTestCase;
+
+public class CalculatorTest extends UiAutomatorTestCase {
+
+}

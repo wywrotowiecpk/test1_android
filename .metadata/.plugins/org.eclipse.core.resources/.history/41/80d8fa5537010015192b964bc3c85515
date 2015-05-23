@@ -11,7 +11,7 @@ public class CalculatorTest extends UiAutomatorTestCase {
 	public void testingCalculator() throws UiObjectNotFoundException {   
 		// First we testing the press of the HOME button.
 		getUiDevice().pressHome();
-		 // using the uiautomatorviewer tool we foun that the button for the "applications" has
+		 // using the uiautomatorviewer tool we found that the button for the "applications" has
 		 //the value “Apps” (screen9)
 		 // so we use this property to create a UiSelector to find the button.
 		UiObject Applications = new UiObject(new UiSelector().description("Apps"));

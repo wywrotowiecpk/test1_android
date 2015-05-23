@@ -13,7 +13,7 @@ public class CalculatorTest extends UiAutomatorTestCase {
 		getUiDevice().pressHome();
 		 // using the uiautomatorviewer tool we foun that the button for the "applications" has
 		 //the value “Apps” (screen9)
-		 // so we usethis property to create a UiSelector to find the button.
+		 // so we use this property to create a UiSelector to find the button.
 		UiObject Applications = new UiObject(new UiSelector().description("Apps"));
 		// testing the click to bring up the All Apps screen.
 		Applications.clickAndWaitForNewWindow();

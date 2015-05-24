@@ -28,11 +28,13 @@ public class CalculatorTest extends UiAutomatorTestCase {
 		UiScrollable ListOfapplications = new UiScrollable(new UiSelector().scrollable(true));
 		// and then trying to find the application
 		// with the name Calculator
-		UiObject Calculator = ListOfapplications.getChildByText(new UiSelector().className(android.widget.TextView.class.getName()),"Calculator");
+		UiObject Calculator = ListOfapplications.getChildByText(new UiSelector().className(android.widget.TextView.class.getName()),"European War 4: Napoleon");
 		Calculator.clickAndWaitForNewWindow();
 		// now the Calculator app is open
 		// so we can test the press of button "7" using the ID "com.android.calculator2:id/digit7"
 		//we found by using uiautomatorviewer
+		
+		
 		UiObject seven = new UiObject(new UiSelector().resourceId("com.android.calculator2:id/digit7"));
 		seven.click();
 		// now we test the press of button "+"
@@ -42,9 +44,17 @@ public class CalculatorTest extends UiAutomatorTestCase {
 		UiObject one = new UiObject(new UiSelector().resourceId("com.android.calculator2:id/digit1"));
 		one.click();
 		// we test the press of button "="
-		UiObject result = new UiObject(new UiSelector().resourceId("com.android.calculator2:id/equal"));
-		result.click();
-		//and finally we test the press of "Back" button
+		UiObject equal  = new UiObject(new UiSelector().resourceId("com.android.calculator2:id/equal"));
+		equal.click();
+		UiObject result  = new UiObject(new UiSelector().className("android.widget.EditText"));
+		String d = result.getText();
+		result.clearTextField();
+		if (d=="8"){getUiDevice().pressBack();}
+		UiObject option  = new UiObject(new UiSelector().text("Copy"));
+		option.click();
 		getUiDevice().pressBack();
+		
+		
+		
 		}
 }
